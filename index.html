@@ -57,6 +57,26 @@
         button:hover {
             background: var(--th-theme-secondary-bg-color);
         }
+
+        #form {
+            display: none;
+            text-align:center;
+        }
+
+        input {
+            width: 90%;
+            outline: none;
+            margin: 10px 5%;
+            padding: 15px 10px;
+            font-size: 14px;
+            border: 2px solid silver;
+            border-radius: 5px;
+        }
+        input:focus {
+            border-color: #db5d5d;
+        }
+
+
     </style>
 </head>
 <body>
@@ -66,6 +86,29 @@
         <p>Lorem ipsum</p>
         <button id="buy">Купить</button>
     </div>
+    <form id="form">
+        <input type="text" placeholder="Имя" id="user_name">
+        <input type="text" placeholder="телефон" id="user_number">
+        <input type="text" placeholder="название" id="user_naming">
+        <input type="text" placeholder="состояние" id="user_condition">
+        <button id="order">Оформить</button>
+
+    </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        let tg = window.Telegram.WebApp;
+        let buy = document.getElementById("buy");
+        let buy = document.getElementById("order");
+        buy.addEventListener("click", ()=>{
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("form").style.display = 'block';
+            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + '' ;
+            
+        })
+        order.addEventListener('click', () => {
+            tg.close();
+        })
+
+    </script>
 </body>
 </html>
