@@ -113,7 +113,6 @@
             let number = document.getElementById("user_number").value;
             let naming = document.getElementById("user_naming").value;
             let condition = document.getElementById("user_condition").value;
-
             if (number.length < 10) {
                 document.getElementById("error").innerText = 'Не хватает цифр в номере';
                 return;
@@ -123,14 +122,17 @@
             if (name.length < 2) {
                 document.getElementById("error").innerText = 'Не хватает цифр в номере';
                 return;
+                }
 
             if (naming.length < 2) {
                 document.getElementById("error").innerText = 'Не хватает цифр в номере';
                 return;
+                }
 
             if (condition.length < 2) {
                 document.getElementById("error").innerText = 'Не хватает цифр в номере';
                 return;
+                }
 
             let data = {
                 name: name,
@@ -142,9 +144,7 @@
             tg.sendData(JSON.stringify(data));
 
             tg.close();
-
-
-        })
+        })    
 
     </script>
 </body>
