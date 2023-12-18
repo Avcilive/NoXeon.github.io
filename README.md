@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>NoXeon4363</title>
+    <title>NoXeon</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
@@ -69,11 +69,11 @@
             margin: 10px 5%;
             padding: 15px 10px;
             font-size: 14px;
-            border: 2px solid silver;
+            border: 2px solid #b8b8b8;
             border-radius: 5px;
         }
         input:focus {
-            border-color: #db5d5d;
+            border-color: #5663e4;
         }
 
 
@@ -91,6 +91,7 @@
         <input type="text" placeholder="телефон" id="user_number">
         <input type="text" placeholder="название" id="user_naming">
         <input type="text" placeholder="состояние" id="user_condition">
+        <div id="error"></div>
         <button id="order">Оформить</button>
 
     </form>
@@ -99,6 +100,7 @@
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
+        tg.expand();
         buy.addEventListener("click", ()=>{
             document.getElementById("main").style.display = 'none';
             document.getElementById("form").style.display = 'block';
@@ -106,7 +108,42 @@
 
         })
         order.addEventListener('click', () => {
+            document.getElementById("error").innerText = '';
+            let name = document.getElementById("user_name").value;
+            let number = document.getElementById("user_number").value;
+            let naming = document.getElementById("user_naming").value;
+            let condition = document.getElementById("user_condition").value;
+
+            if (number.length < 10) {
+                document.getElementById("error").innerText = 'Не хватает цифр в номере';
+                return;
+
+            }
+
+            if (name.length < 2) {
+                document.getElementById("error").innerText = 'Не хватает цифр в номере';
+                return;
+
+            if (naming.length < 2) {
+                document.getElementById("error").innerText = 'Не хватает цифр в номере';
+                return;
+
+            if (condition.length < 2) {
+                document.getElementById("error").innerText = 'Не хватает цифр в номере';
+                return;
+
+            let data = {
+                name: name,
+                number: number,
+                naming: naming,
+                condition: condition
+
+            }
+            tg.sendData(JSON.stringify(data));
+
             tg.close();
+
+
         })
 
     </script>
