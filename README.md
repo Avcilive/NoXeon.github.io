@@ -119,6 +119,7 @@
             let condition = document.getElementById("user_condition").value;
             if (name.length < 1) {
                 document.getElementById("error").innerText = "Ошибка в имени";
+                return;
             }
 
            
