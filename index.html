@@ -110,7 +110,40 @@
         })
 
         order.addEventListener('click', () => {
-            
+            document.getElementById("error").innerText = '';
+            let name = document.getElementById("user_name").value;
+            let number = document.getElementById("user_number").value;
+            let naming = document.getElementById("user_naming").value;
+            let condition = document.getElementById("user_condition").value;
+
+            if(name.length < 1) {
+                document.getElementById("error").innerText = 'Ошибкаerw в имени';
+                return;
+            }
+            // if (number.length < 10) {
+            //     document.getElementById("error").innerText = 'Не хватает цифр в номере';
+            //     return;
+            // }
+            //
+            // if (naming.length < 1) {
+            //     document.getElementById("error").innerText = 'Ошибка в названии';
+            //     return;
+            //     }
+            //
+            // if (condition.length < 1) {
+            //     document.getElementById("error").innerText = 'Ошибка в описании';
+            //     return;
+            //     }
+            //
+            // let data = {
+            //     name: name,
+            //     number: number,
+            //     naming: naming,
+            //     condition: condition
+            //
+            // }
+            tg.sendData(JSON.stringify(data));
+
             tg.close();
         });
 
