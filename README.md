@@ -102,49 +102,17 @@
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
         tg.expand();
+
         buy.addEventListener("click", ()=> {
             document.getElementById("main").style.display = 'none';
             document.getElementById("form").style.display = 'block';
-            document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + '' ;
 
         })
+
         order.addEventListener('click', () => {
-            document.getElementById("error").innerText = '';
-            let name = document.getElementById("user_name").value;
-            let number = document.getElementById("user_number").value;
-            let naming = document.getElementById("user_naming").value;
-            let condition = document.getElementById("user_condition").value;
-
-            if (name.length < 1) {
-                document.getElementById("error").innerText = 'Ошибка в имени';
-                return;
-            }
-            // if (number.length < 10) {
-            //     document.getElementById("error").innerText = 'Не хватает цифр в номере';
-            //     return;
-            // }
-            //
-            // if (naming.length < 1) {
-            //     document.getElementById("error").innerText = 'Ошибка в названии';
-            //     return;
-            //     }
-            //
-            // if (condition.length < 1) {
-            //     document.getElementById("error").innerText = 'Ошибка в описании';
-            //     return;
-            //     }
-            //
-            // let data = {
-            //     name: name,
-            //     number: number,
-            //     naming: naming,
-            //     condition: condition
-            //
-            // }
-            tg.sendData(JSON.stringify(data));
-
+            
             tg.close();
-        })
+        });
 
     </script>
 </body>
