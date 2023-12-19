@@ -104,7 +104,7 @@
 
     <form id="form">
         <h1>Оформление заявки</h1>
-        <input type="text" placeholder="Им43я" id="user_name">
+        <input type="text" placeholder="Имя" id="user_name">
         <input type="text" placeholder="Телефон" id="user_number">
         <input type="text" placeholder="Название комплектующего" id="user_naming">
         <input type="text" placeholder="Состояние комплектующего" id="user_condition">
@@ -114,7 +114,7 @@
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        document.getElementById("error").innerText = '';
+        
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
@@ -127,8 +127,8 @@
 
         });
 
-        order.addEventListener('click', () => {
-            document.getElementById("error").innerText = "";
+        order.addEventListener("click", () => {
+            document.getElementById("error").innerText = '';
             let name = document.getElementById("user_name").value;
             let number = document.getElementById("user_number").value;
             let naming = document.getElementById("user_naming").value;
