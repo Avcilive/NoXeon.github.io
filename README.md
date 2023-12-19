@@ -9,6 +9,8 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Geologica:wght@800&display=swap');
+
 
         * {
             margin: 0;
@@ -47,16 +49,17 @@
         }
 
         button {
-            border: 0;
-            border-radius: 25px;
             margin-top: 50px;
-            height: 60px;
-            width: 200px;
-            font-size: 20px;
+            font-family: 'Geologica', sans-serif;
+            font-weight: 0;
+            font-size: 14px;
+            color: #ffffff;
+            background-color: #5663e4;
+            padding: 10px 30px;
+            border: 2px solid #ffffff;
             box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+            border-radius: 50px;
             transition : 1000ms;
-            transform: translateY(0);
-            display: flex;
             flex-direction: row;
             align-items: center;
             cursor: pointer;
@@ -66,9 +69,9 @@
             transition : 1000ms;
             padding: 10px 50px;
             transform : translateY(-0px);
-            background-color: #fff;
-            color: #0066cc;
-            border: solid 2px #0066cc;
+            background-color: #ffffff;
+            color: #5663e4;
+            border: solid 2px #5663e4;
         }
 
         #form {
@@ -83,7 +86,7 @@
             padding: 15px 10px;
             font-size: 14px;
             border: 2px solid #ffffff;
-            border-radius: 5px;
+            border-radius: 15px;
         }
         input:focus {
             border-color: #ffffff;
