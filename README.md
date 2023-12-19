@@ -20,7 +20,7 @@
 
             font-family: 'Geologica', sans-serif;
             font-weight: 200;
-            color: #a41da2;
+            color: #ffffff;
             background: #5663e4;
         }
 
@@ -31,7 +31,7 @@
         }
 
         h1 {
-            f
+
             margin-top: 50px;
             margin-bottom: 10px;
         }
@@ -48,7 +48,7 @@
 
         button {
             border: 0;
-            border-radius: 5px;
+            border-radius: 25px;
             margin-top: 50px;
             height: 60px;
             width: 200px;
@@ -56,7 +56,7 @@
 
         }
         button:hover {
-            background: #1da446;
+            background: #8993f1;
         }
 
         #form {
@@ -70,7 +70,7 @@
             margin: 10px 5%;
             padding: 15px 10px;
             font-size: 14px;
-            border: 2px solid #712626;
+            border: 2px solid #ffffff;
             border-radius: 5px;
         }
         input:focus {
