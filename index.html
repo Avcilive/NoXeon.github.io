@@ -105,10 +105,11 @@
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
+        tg.expand();
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
-        tg.expand();
+
 
 
 
