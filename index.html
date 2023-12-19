@@ -99,7 +99,7 @@
     <div id="main">
         <img src="https://sun4-20.userapi.com/s/v1/ig2/OGbkLIUzLzPZz151ZZK04U0dBpZ13ivrw-NHWC59ULlb6GhMmjmNlqzj-Pe734OG-ja7xSFINSm-7aBqCpLWCJaD.jpg?size=100x100&quality=95&crop=0,0,500,500&ava=1">
         <h1>Скупка железа</h1>
-        <button id="buy">Купить</button>
+        <button id="buy">Купwwwить</button>
     </div>
 
     <form id="form">
@@ -121,7 +121,7 @@
         tg.expand();
 
         buy.addEventListener("click", ()=> {
-
+            document.getElementById("error").innerText = '';
             document.getElementById("main").style.display = "none";
             document.getElementById("form").style.display = "block";
 
