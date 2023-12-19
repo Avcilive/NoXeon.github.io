@@ -110,7 +110,7 @@
         });
 
         order.addEventListener('click', () => {
-            document.getElementById("error").innerText = '';
+            
             let name = document.getElementById("user_name").value;
             let number = document.getElementById("user_number").value;
             let naming = document.getElementById("user_naming").value;
