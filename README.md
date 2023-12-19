@@ -118,29 +118,31 @@
 
             if(name.length < 1) {
                 document.getElementById("error").innerText = 'Ошибкаerw в имени';
+
             }
-            // if (number.length < 10) {
-            //     document.getElementById("error").innerText = 'Не хватает цифр в номере';
-            //     return;
-            // }
-            //
-            // if (naming.length < 1) {
-            //     document.getElementById("error").innerText = 'Ошибка в названии';
-            //     return;
-            //     }
-            //
-            // if (condition.length < 1) {
-            //     document.getElementById("error").innerText = 'Ошибка в описании';
-            //     return;
-            //     }
-            //
-            // let data = {
-            //     name: name,
-            //     number: number,
-            //     naming: naming,
-            //     condition: condition
-            //
-            // }
+
+            if (number.length < 10) {
+                document.getElementById("error").innerText = 'Не хватает цифр в номере';
+                return;
+            }
+
+            if (naming.length < 1) {
+                document.getElementById("error").innerText = 'Ошибка в названии';
+                return;
+                }
+
+            if (condition.length < 1) {
+                document.getElementById("error").innerText = 'Ошибка в описании';
+                return;
+                }
+
+            let data = {
+                name: name,
+                number: number,
+                naming: naming,
+                condition: condition
+
+            }
             tg.sendData(JSON.stringify(data));
 
             tg.close();
