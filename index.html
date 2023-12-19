@@ -26,6 +26,11 @@
             background: #5663e4;
         }
 
+        #main {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
 
         h1 {
             margin-top: 50px;
@@ -69,7 +74,7 @@
         }
 
         #form {
-            display: block;
+            display: none;
             text-align:center;
         }
 
@@ -91,11 +96,16 @@
 </head>
 <body>
 
-
+    <div id="main">
+        <img src="https://sun4-20.userapi.com/s/v1/ig2/OGbkLIUzLzPZz151ZZK04U0dBpZ13ivrw-NHWC59ULlb6GhMmjmNlqzj-Pe734OG-ja7xSFINSm-7aBqCpLWCJaD.jpg?size=100x100&quality=95&crop=0,0,500,500&ava=1">
+        <h1>Онлайн магазин</h1>
+        <p>Lorem ipsum</p>
+        <button id="buy">Купить</button>
+    </div>
 
     <form id="form">
         <h1>Оформление заявки</h1>
-        <input type="text" placeholder="Имяrqrqd" id="user_name">
+        <input type="text" placeholder="Имя" id="user_name">
         <input type="text" placeholder="Телефон" id="user_number">
         <input type="text" placeholder="Название комплектующего" id="user_naming">
         <input type="text" placeholder="Состояние комплектующего" id="user_condition">
@@ -105,26 +115,43 @@
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-
         let tg = window.Telegram.WebApp;
+        let buy = document.getElementById("buy");
         let order = document.getElementById("order");
+        tg.expand();
 
+        buy.addEventListener("click", ()=> {
 
+            document.getElementById("main").style.display = 'none';
+            document.getElementById("form").style.display = 'block';
+
+        });
 
         order.addEventListener('click', () => {
-            document.getElementById("error").innerText = "";
-            tg.expand();
             let name = document.getElementById("user_name").value;
             let number = document.getElementById("user_number").value;
             let naming = document.getElementById("user_naming").value;
             let condition = document.getElementById("user_condition").value;
 
-            if (name.length < 1) {
+            if(name.length < 1) {
                 document.getElementById("error").innerText = "Ошибка в имени";
-                return order;
+                return;
             }
 
+            if (number.length < 10) {
+                document.getElementById("error").innerText = "Не хватает цифр в номере";
+                return;
+            }
 
+            if (naming.length < 1) {
+                document.getElementById("error").innerText = "Ошибка в названии";
+                return;
+                }
+
+            if (condition.length < 1) {
+                document.getElementById("error").innerText = "Ошибка в описании";
+                return;
+                }
 
             let data = {
                 name: name,
