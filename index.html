@@ -105,7 +105,7 @@
 
     <form id="form">
         <h1>Оформление заявки</h1>
-        <input type="text" placeholder="Имя53" id="user_name">
+        <input type="text" placeholder="Имяwregrg532" id="user_name">
         <input type="text" placeholder="Телефон" id="user_number">
         <input type="text" placeholder="Название комплектующего" id="user_naming">
         <input type="text" placeholder="Состояние комплектующего" id="user_condition">
@@ -136,8 +136,12 @@
             let naming = document.getElementById("user_naming").value;
             let condition = document.getElementById("user_condition").value;
 
+            if(name.length == 1) {
+                document.getElementById("error").innerText = "Ошибка в имени";
+                return order;
 
-            document.getElementById("error").innerText = "Ошибкаrtgzzzzzzzzzzzzz в имени";
+            }
+
 
 
 
