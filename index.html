@@ -104,6 +104,7 @@
         tg.expand();
 
         buy.addEventListener("click", ()=> {
+            document.getElementById("error").innerText = '';
             document.getElementById("main").style.display = 'none';
             document.getElementById("form").style.display = 'block';
 
