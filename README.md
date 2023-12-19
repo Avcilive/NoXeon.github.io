@@ -54,7 +54,6 @@
             width: 200px;
             font-size: 20px;
             box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
-            border-radius: 50px;
             transition : 1000ms;
             transform: translateY(0);
             display: flex;
