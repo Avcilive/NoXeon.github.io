@@ -114,7 +114,7 @@
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
-        document.getElementById("error").innerText = "";
+        document.getElementById("error").innerText = '';
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
         let order = document.getElementById("order");
@@ -122,36 +122,34 @@
 
         buy.addEventListener("click", ()=> {
 
-            document.getElementById("main").style.display = 'none';
-            document.getElementById("form").style.display = 'block';
+            document.getElementById("main").style.display = "none";
+            document.getElementById("form").style.display = "block";
 
         });
 
         order.addEventListener('click', () => {
-
             document.getElementById("error").innerText = "";
             let name = document.getElementById("user_name").value;
             let number = document.getElementById("user_number").value;
             let naming = document.getElementById("user_naming").value;
             let condition = document.getElementById("user_condition").value;
-
             if(name.length < 1) {
-                document.getElementById("error").innerText = "Ошибка в имени";
+                document.getElementById("error").innerText = 'Ошибка в имени';
                 return;
             }
 
             if (number.length < 10) {
-                document.getElementById("error").innerText = "Не хватает цифр в номере";
-                return;
+                document.getElementById("error").innerText = 'Не хватает цифр в номере';
+                return ;
             }
 
             if (naming.length < 1) {
-                document.getElementById("error").innerText = "Ошибка в названии";
+                document.getElementById("error").innerText = 'Ошибка в названии';
                 return;
             }
 
             if (condition.length < 1) {
-                document.getElementById("error").innerText = "Ошибка в описании";
+                document.getElementById("error").innerText = 'Ошибка в описании';
                 return;
             }
 
