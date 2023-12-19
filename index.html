@@ -117,6 +117,10 @@
             let number = document.getElementById("user_number").value;
             let naming = document.getElementById("user_naming").value;
             let condition = document.getElementById("user_condition").value;
+            if (name.length < 1) {
+                document.getElementById("error").innerText = "Ошибка в имени";
+            }
+
            
 
             let data = {
