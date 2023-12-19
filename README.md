@@ -115,10 +115,10 @@
             let naming = document.getElementById("user_naming").value;
             let condition = document.getElementById("user_condition").value;
 
-            // if (name.length < 1) {
-            //     document.getElementById("error").innerText = 'Ошибка в имени';
-            //     return;
-            // }
+            if (name.length < 1) {
+                document.getElementById("error").innerText = 'Ошибка в имени';
+                return;
+            }
             // if (number.length < 10) {
             //     document.getElementById("error").innerText = 'Не хватает цифр в номере';
             //     return;
@@ -133,14 +133,14 @@
             //     document.getElementById("error").innerText = 'Ошибка в описании';
             //     return;
             //     }
-
-            let data = {
-                name: name,
-                number: number,
-                naming: naming,
-                condition: condition
-
-            }
+            //
+            // let data = {
+            //     name: name,
+            //     number: number,
+            //     naming: naming,
+            //     condition: condition
+            //
+            // }
             tg.sendData(JSON.stringify(data));
 
             tg.close();
