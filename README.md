@@ -53,10 +53,23 @@
             height: 60px;
             width: 200px;
             font-size: 20px;
+            box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+            border-radius: 50px;
+            transition : 1000ms;
+            transform: translateY(0);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            cursor: pointer;
 
         }
         button:hover {
-            background: #8993f1;
+            transition : 1000ms;
+            padding: 10px 50px;
+            transform : translateY(-0px);
+            background-color: #fff;
+            color: #0066cc;
+            border: solid 2px #0066cc;
         }
 
         #form {
@@ -104,36 +117,35 @@
         tg.expand();
 
         buy.addEventListener("click", ()=> {
-            document.getElementById("error").innerText = '';
+
             document.getElementById("main").style.display = 'none';
             document.getElementById("form").style.display = 'block';
 
         });
 
         order.addEventListener('click', () => {
-            
             let name = document.getElementById("user_name").value;
             let number = document.getElementById("user_number").value;
             let naming = document.getElementById("user_naming").value;
             let condition = document.getElementById("user_condition").value;
 
             if(name.length < 1) {
-                document.getElementById("error").innerText = 'Ошибкаerw в имени';
+                document.getElementById("error").innerText = "Ошибка в имени";
                 return;
             }
 
             if (number.length < 10) {
-                document.getElementById("error").innerText = 'Не хватает цифр в номере';
+                document.getElementById("error").innerText = "Не хватает цифр в номере";
                 return;
             }
 
             if (naming.length < 1) {
-                document.getElementById("error").innerText = 'Ошибка в названии';
+                document.getElementById("error").innerText = "Ошибка в названии";
                 return;
                 }
 
             if (condition.length < 1) {
-                document.getElementById("error").innerText = 'Ошибка в описании';
+                document.getElementById("error").innerText = "Ошибка в описании";
                 return;
                 }
 
