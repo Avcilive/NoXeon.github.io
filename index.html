@@ -33,14 +33,13 @@
         }
 
         h1 {
-
             margin-top: 50px;
             margin-bottom: 10px;
         }
 
         img {
-            width: 70px;
-            margin: 30px auto;
+            width: 100px;
+            margin: 10px ;
         }
 
         p {
@@ -49,7 +48,7 @@
         }
 
         button {
-            margin-top: 50px;
+            margin-top: 100px;
             font-family: 'Geologica', sans-serif;
             font-weight: 0;
             font-size: 14px;
@@ -97,8 +96,9 @@
 </head>
 <body>
     <div id="main">
+
+        <img src="https://sun4-20.userapi.com/s/v1/ig2/OGbkLIUzLzPZz151ZZK04U0dBpZ13ivrw-NHWC59ULlb6GhMmjmNlqzj-Pe734OG-ja7xSFINSm-7aBqCpLWCJaD.jpg?size=100x100&quality=95&crop=0,0,500,500&ava=1">
         <h1>Онлайн магазин</h1>
-        <img src="https://sun9-39.userapi.com/impg/JVKAa35goFgG2KeIMpCZZHr_CLpnijExe-RoRg/UKUmxJEu-rs.jpg?size=785x589&quality=96&sign=0a8c205bcc92ef35a6cbd1cd53cac38f&c_uniq_tag=bOLNMFDxhPdUCZiD4FxoTgTaYcXS_9RKHM2EpNtinlM&type=album">
         <p>Lorem ipsum</p>
         <button id="buy">Купить</button>
     </div>
