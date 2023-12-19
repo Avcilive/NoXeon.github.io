@@ -26,11 +26,6 @@
             background: #5663e4;
         }
 
-        #main {
-            width: 100%;
-            padding: 20px;
-            text-align: center;
-        }
 
         h1 {
             margin-top: 50px;
@@ -56,7 +51,7 @@
             background-color: #5663e4;
             padding: 10px 30px;
             border: 2px solid #ffffff;
-            box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+            box-shadow: rgb(0, 0, 0);
             border-radius: 50px;
             transition : 1000ms;
             flex-direction: row;
@@ -74,7 +69,7 @@
         }
 
         #form {
-            display: none;
+            display: block;
             text-align:center;
         }
 
@@ -95,12 +90,9 @@
     </style>
 </head>
 <body>
-    <div id="main">
-        <img src="https://sun4-20.userapi.com/s/v1/ig2/OGbkLIUzLzPZz151ZZK04U0dBpZ13ivrw-NHWC59ULlb6GhMmjmNlqzj-Pe734OG-ja7xSFINSm-7aBqCpLWCJaD.jpg?size=100x100&quality=95&crop=0,0,500,500&ava=1">
-        <h1>Онлайн магазин</h1>
-        <p>Lorem ipsum</p>
-        <button id="buy">Купить</button>
-    </div>
+
+
+
     <form id="form">
         <h1>Оформление заявки</h1>
         <input type="text" placeholder="Имя" id="user_name">
@@ -118,12 +110,7 @@
         let order = document.getElementById("order");
         tg.expand();
 
-        buy.addEventListener("click", ()=> {
 
-            document.getElementById("main").style.display = 'none';
-            document.getElementById("form").style.display = 'block';
-
-        });
 
         order.addEventListener('click', () => {
             let name = document.getElementById("user_name").value;
