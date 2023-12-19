@@ -118,7 +118,6 @@
 
             if(name.length < 1) {
                 document.getElementById("error").innerText = 'Ошибкаerw в имени';
-                return;
             }
             // if (number.length < 10) {
             //     document.getElementById("error").innerText = 'Не хватает цифр в номере';
