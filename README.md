@@ -20,8 +20,8 @@
 
             font-family: 'Geologica', sans-serif;
             font-weight: 200;
-            color: var(--tg-theme-text-color);
-            background: var(--tg-theme-bg-color);
+            color: #a41da2;
+            background: #5663e4;
         }
 
         #main {
@@ -31,6 +31,7 @@
         }
 
         h1 {
+            f
             margin-top: 50px;
             margin-bottom: 10px;
         }
@@ -55,7 +56,7 @@
 
         }
         button:hover {
-            background: var(--th-theme-secondary-bg-color);
+            background: #1da446;
         }
 
         #form {
@@ -69,11 +70,11 @@
             margin: 10px 5%;
             padding: 15px 10px;
             font-size: 14px;
-            border: 2px solid #b8b8b8;
+            border: 2px solid #712626;
             border-radius: 5px;
         }
         input:focus {
-            border-color: #5663e4;
+            border-color: #ffffff;
         }
 
 
@@ -88,9 +89,9 @@
     </div>
     <form id="form">
         <input type="text" placeholder="Имя" id="user_name">
-        <input type="text" placeholder="телефон" id="user_number">
-        <input type="text" placeholder="название" id="user_naming">
-        <input type="text" placeholder="состояние" id="user_condition">
+        <input type="text" placeholder="Телефон" id="user_number">
+        <input type="text" placeholder="Название комплектующего" id="user_naming">
+        <input type="text" placeholder="Состояние комплектующего" id="user_condition">
         <div id="error"></div>
         <button id="order">Оформить</button>
 
@@ -119,18 +120,18 @@
 
             }
 
-            if (name.length < 2) {
-                document.getElementById("error").innerText = 'Не хватает цифр в номере';
+            if (name.length < 1) {
+                document.getElementById("error").innerText = 'Ошибка в имени';
                 return;
                 }
 
-            if (naming.length < 2) {
-                document.getElementById("error").innerText = 'Не хватает цифр в номере';
+            if (naming.length < 1) {
+                document.getElementById("error").innerText = 'Ошибка в названии';
                 return;
                 }
 
-            if (condition.length < 2) {
-                document.getElementById("error").innerText = 'Не хватает цифр в номере';
+            if (condition.length < 1) {
+                document.getElementById("error").innerText = 'Ошибка в описании';
                 return;
                 }
 
@@ -144,7 +145,7 @@
             tg.sendData(JSON.stringify(data));
 
             tg.close();
-        })    
+        })
 
     </script>
 </body>
