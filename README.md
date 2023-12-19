@@ -98,14 +98,13 @@
 
     <div id="main">
         <img src="https://sun4-20.userapi.com/s/v1/ig2/OGbkLIUzLzPZz151ZZK04U0dBpZ13ivrw-NHWC59ULlb6GhMmjmNlqzj-Pe734OG-ja7xSFINSm-7aBqCpLWCJaD.jpg?size=100x100&quality=95&crop=0,0,500,500&ava=1">
-        <h1>Онлайн магазин</h1>
-        <p>Lorem ipsum</p>
+        <h1>Скупка железа</h1>
         <button id="buy">Купить</button>
     </div>
 
     <form id="form">
         <h1>Оформление заявки</h1>
-        <input type="text" placeholder="Имяwregrg532" id="user_name">
+        <input type="text" placeholder="Имя" id="user_name">
         <input type="text" placeholder="Телефон" id="user_number">
         <input type="text" placeholder="Название комплектующего" id="user_naming">
         <input type="text" placeholder="Состояние комплектующего" id="user_condition">
@@ -114,7 +113,7 @@
 
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script id="test">
+    <script>
         document.getElementById("error").innerText = "";
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
@@ -136,15 +135,25 @@
             let naming = document.getElementById("user_naming").value;
             let condition = document.getElementById("user_condition").value;
 
-            if(name.length == 1) {
+            if(name.length < 1) {
                 document.getElementById("error").innerText = "Ошибка в имени";
-                return order;
-
+                return;
             }
 
+            if (number.length < 10) {
+                document.getElementById("error").innerText = "Не хватает цифр в номере";
+                return;
+            }
 
+            if (naming.length < 1) {
+                document.getElementById("error").innerText = "Ошибка в названии";
+                return;
+            }
 
-
+            if (condition.length < 1) {
+                document.getElementById("error").innerText = "Ошибка в описании";
+                return;
+            }
 
             let data = {
                 name: name,
