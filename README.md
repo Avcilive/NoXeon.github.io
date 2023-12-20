@@ -98,16 +98,17 @@
 
     <div id="main">
         <img src="https://sun4-20.userapi.com/s/v1/ig2/OGbkLIUzLzPZz151ZZK04U0dBpZ13ivrw-NHWC59ULlb6GhMmjmNlqzj-Pe734OG-ja7xSFINSm-7aBqCpLWCJaD.jpg?size=100x100&quality=95&crop=0,0,500,500&ava=1">
-        <h1>Скупка жеuyлеза</h1>
+        <h1>Скупка желе35за</h1>
         <button id="buy">КупИть</button>
     </div>
 
     <form id="form">
         <h1>Оформление заявки</h1>
-        <input type="text" placeholder="Иeeмя" id="user_name">
-        <input type="text" placeholder="Телефон" id="user_number">
-        <input type="text" placeholder="Название комплектующего" id="user_naming">
-        <input type="text" placeholder="Состояние комплектующего" id="user_condition">
+        <input id="user_name" type="text" title="Введите число от 1 до 9" pattern="[1-9]">
+        <input id="user_number" type="text" title="Введите число от 1 до 9" pattern="[1-9]">
+        <input id="user_naming" type="text" title="Введите число от 1 до 9" pattern="[1-9]">
+        <input id="user_condition" type="text" title="Введите число от 1 до 9" pattern="[1-9]">
+        
         <div id="error"></div>
         <button id="order">Оформить</button>
 
@@ -131,7 +132,7 @@
             let number = document.getElementById("user_number").value;
             let naming = document.getElementById("user_naming").value;
             let condition = document.getElementById("user_condition").value;
-            
+
 
             let data = {
                 name: name,
