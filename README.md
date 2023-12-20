@@ -103,21 +103,25 @@
     </div>
 
     <form id="form">
-        
-
-        <input type="text" id="user_name" required placeholder="Как к Вам обращаться?" title="от 3 символов" pattern="^[A-Za-zА-Яа-яЁё\s]{3,}">
-
-
-
-        <input type="text" id="user_number" required placeholder="Введите номер телефона" title="от 10 до 11 цифр" pattern="[0-9]{10,11}">
+        <label>
+            <p>Введите число от 1 до 9</p>
+            <input type="text" title="Введите число от 1 до 9" pattern="[1-9]">
+        </label>
 
 
-
-        <input type="text" id="user_naming" required placeholder="Название комплектующего" title="от 3 символов" pattern="^[A-Za-zА-Яа-яЁё\s]{3,}">
+<!--        <input type="text" id="user_name" required placeholder="Как к Вам обращаться?" title="от 3 символов" pattern="^[A-Za-zА-Яа-яЁё\s]{3,}">-->
 
 
 
-        <input type="text" id="user_condition" required placeholder="Состояние комплектующего" title="от 3 символов" pattern="^[A-Za-zА-Яа-яЁё\s]{3,}">
+<!--        <input type="text" id="user_number" required placeholder="Введите номер телефона" title="от 10 до 11 цифр" pattern="[0-9]{10,11}">-->
+
+
+
+<!--        <input type="text" id="user_naming" required placeholder="Название комплектующего" title="от 3 символов" pattern="^[A-Za-zА-Яа-яЁё\s]{3,}">-->
+
+
+
+<!--        <input type="text" id="user_condition" required placeholder="Состояние комплектующего" title="от 3 символов" pattern="^[A-Za-zА-Яа-яЁё\s]{3,}">-->
 
 
 
