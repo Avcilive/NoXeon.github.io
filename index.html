@@ -98,7 +98,7 @@
 
     <form id="form">
 
-        <label for="name">ИeFergeмя:</label>
+        <label for="name">ИeFer325geмя:</label>
         <input type="text" id="name" name="name" required>
 
         <label for="email">Email:</label>
@@ -115,11 +115,11 @@
 
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
-        let order = document.getElementById("order");
+        let order = document.getElementById("radr");
         tg.expand();
 
 
-        radr.addEventListener("click", () => {
+        order.addEventListener("click", () => {
             let name = document.getElementById("text").value;
             let number = document.getElementById("email").value;
             let condition = document.getElementById("message").value;
