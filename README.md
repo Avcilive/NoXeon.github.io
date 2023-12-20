@@ -109,8 +109,7 @@
 
         <button id="rr">Отправить</button>
     </form>
-
-    </form>
+    
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
 
@@ -126,6 +125,7 @@
             let naming = document.getElementById("user_naming").value;
             let condition = document.getElementById("user_condition").value;
             document.getElementById("error").innerText = '';
+            
             if (name.length < 1) {
                 document.getElementById("error").innerText = 'Ошибка в имени';
                 return;
