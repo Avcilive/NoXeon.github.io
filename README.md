@@ -103,7 +103,7 @@
     </div>
 
     <form id="form">
-        <h1>Оформление заявки</h1>
+        <h1>Оформлениеr заявки</h1>
         <input id="user_name" type="text" title="Введите число от 1 до 9" pattern="[1-9]">
         <input id="user_number" type="text" title="Введите число от 1 до 9" pattern="[1-9]">
         <input id="user_naming" type="text" title="Введите число от 1 до 9" pattern="[1-9]">
