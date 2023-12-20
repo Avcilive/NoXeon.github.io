@@ -96,7 +96,7 @@
 
     <form id="form">
         <h1>Оформление заявки</h1>
-        <input type="text" placeholder="Иeeмя" id="user_name">
+        <input type="text" placeholder="Иee523мя" id="user_name">
         <input type="text" placeholder="Телефон" id="user_number">
         <input type="text" placeholder="Название комплектующего" id="user_naming">
         <input type="text" placeholder="Состояние комплектующего" id="user_condition">
@@ -113,14 +113,15 @@
         tg.expand();
 
 
-        
+
 
         order.addEventListener("click", () => {
-            document.getElementById("error").innerText = '';
+            
             let name = document.getElementById("user_name").value;
             let number = document.getElementById("user_number").value;
             let naming = document.getElementById("user_naming").value;
             let condition = document.getElementById("user_condition").value;
+            document.getElementById("error").innerText = '';
             if (name.length < 1) {
                 document.getElementById("error").innerText = 'Ошибка в имени';
                 return;
