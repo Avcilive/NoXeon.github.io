@@ -26,7 +26,11 @@
             background: #5663e4;
         }
 
-
+        #main {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
 
         h1 {
             margin-top: 50px;
@@ -70,9 +74,8 @@
         }
 
         #form {
-            width: 100%;
-            padding: 20px;
-            text-align: center;
+            display: none;
+            text-align:center;
         }
 
         input {
@@ -93,54 +96,42 @@
 </head>
 <body>
 
-
-
+    <div id="main">
+        <img src="https://sun4-20.userapi.com/s/v1/ig2/OGbkLIUzLzPZz151ZZK04U0dBpZ13ivrw-NHWC59ULlb6GhMmjmNlqzj-Pe734OG-ja7xSFINSm-7aBqCpLWCJaD.jpg?size=100x100&quality=95&crop=0,0,500,500&ava=1">
+        <h1>Скупка жеuyлеза</h1>
+        <button id="buy">КупИть</button>
+    </div>
 
     <form id="form">
+        <h1>Оформление заявки</h1>
+        <input type="text" placeholder="Иeeмя" id="user_name">
+        <input type="text" placeholder="Телефон" id="user_number">
+        <input type="text" placeholder="Название комплектующего" id="user_naming">
+        <input type="text" placeholder="Состояние комплектующего" id="user_condition">
+        <div id="error"></div>
+        <button id="order">Оформить</button>
 
-        <label for="name">ИeFer325geмя:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Сообщение:</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button id="radr">Отправить</button>
     </form>
-
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
 
         let tg = window.Telegram.WebApp;
         let buy = document.getElementById("buy");
-        let order = document.getElementById("radr");
+        let order = document.getElementById("order");
         tg.expand();
 
+        buy.addEventListener("click", ()=> {
+            document.getElementById("main").style.display = "none";
+            document.getElementById("form").style.display = "block";
+        });
 
         order.addEventListener("click", () => {
-            let name = document.getElementById("text").value;
-            let number = document.getElementById("email").value;
-            let condition = document.getElementById("message").value;
             document.getElementById("error").innerText = '';
-
-            if (name.length < 1) {
-                document.getElementById("error").innerText = 'Ошибка в имени';
-                return;
-            }
-
-            if (number.length < 10) {
-                document.getElementById("error").innerText = 'Не хватает цифр в номере';
-                return;
-            }
-
-
-
-            if (condition.length < 1) {
-                document.getElementById("error").innerText = 'Ошибка в описании';
-                return;
-            }
+            let name = document.getElementById("user_name").value;
+            let number = document.getElementById("user_number").value;
+            let naming = document.getElementById("user_naming").value;
+            let condition = document.getElementById("user_condition").value;
+            
 
             let data = {
                 name: name,
