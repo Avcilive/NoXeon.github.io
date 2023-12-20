@@ -96,9 +96,9 @@
 
 
 
-    <form action="/submit" method="post">
+    <form id="form">
 
-        <label for="name">Имя:</label>
+        <label for="name">ИeFeмя:</label>
         <input type="text" id="name" name="name" required>
 
         <label for="email">Email:</label>
@@ -107,9 +107,9 @@
         <label for="message">Сообщение:</label>
         <textarea id="message" name="message" required></textarea>
 
-        <button id="rr">Отправить</button>
+        <button id="radr">Отправить</button>
     </form>
-    
+
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
 
@@ -119,13 +119,12 @@
         tg.expand();
 
 
-        rr.addEventListener("click", () => {
-            let name = document.getElementById("user_name").value;
-            let number = document.getElementById("user_number").value;
-            let naming = document.getElementById("user_naming").value;
-            let condition = document.getElementById("user_condition").value;
+        radr.addEventListener("click", () => {
+            let name = document.getElementById("name").value;
+            let number = document.getElementById("email").value;
+            let condition = document.getElementById("message").value;
             document.getElementById("error").innerText = '';
-            
+
             if (name.length < 1) {
                 document.getElementById("error").innerText = 'Ошибка в имени';
                 return;
@@ -136,10 +135,7 @@
                 return;
             }
 
-            if (naming.length < 1) {
-                document.getElementById("error").innerText = 'Ошибка в названии';
-                return;
-            }
+
 
             if (condition.length < 1) {
                 document.getElementById("error").innerText = 'Ошибка в описании';
