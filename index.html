@@ -98,7 +98,7 @@
 
     <form id="form">
 
-        <label for="name">ИeFeмя:</label>
+        <label for="name">ИeFergeмя:</label>
         <input type="text" id="name" name="name" required>
 
         <label for="email">Email:</label>
@@ -120,7 +120,7 @@
 
 
         radr.addEventListener("click", () => {
-            let name = document.getElementById("name").value;
+            let name = document.getElementById("text").value;
             let number = document.getElementById("email").value;
             let condition = document.getElementById("message").value;
             document.getElementById("error").innerText = '';
