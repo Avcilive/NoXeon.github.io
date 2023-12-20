@@ -98,16 +98,15 @@
 
     <div id="main">
         <img src="https://sun4-20.userapi.com/s/v1/ig2/OGbkLIUzLzPZz151ZZK04U0dBpZ13ivrw-NHWC59ULlb6GhMmjmNlqzj-Pe734OG-ja7xSFINSm-7aBqCpLWCJaD.jpg?size=100x100&quality=95&crop=0,0,500,500&ava=1">
-        <h1>Скупка желе6447457з4455а</h1>
+        <h1>Скупка железа</h1>
         <button id="buy">Купить</button>
     </div>
 
     <form id="form">
         <label>
-            <p>Введите число от 1 до 9</p>
-            <input type="text" id="user_number" title="Введите число от 1 до 9" pattern="[1-9]">
+            <p>Только русские или латинские слова с пробелами, не менее 6 символов</p>
+            <input type="text" id="user_name" title="Разрешено использовать только пробелы и латинские буквы, не менее 6" pattern="^[A-Za-zА-Яа-яЁё\s]{6,}">
         </label>
-
 
 
 <!--        <label>-->
