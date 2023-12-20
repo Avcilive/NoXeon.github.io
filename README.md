@@ -92,14 +92,23 @@
     </style>
 </head>
 <body>
-    <form id="form">
-        <h1>Оформление заявки</h1>
-        <input type="text" placeholder="Имя" id="user_name">
-        <input type="text" placeholder="Телефон" id="user_number">
-        <input type="text" placeholder="Название комплектующего" id="user_naming">
-        <input type="text" placeholder="Состояние комплектующего" id="user_condition">
-        <div id="error"></div>
-        <button id="order">Оформить</button>
+
+
+
+
+    <form action="/submit" method="post">
+
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button id="rr">Отправить</button>
+    </form>
 
     </form>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
@@ -111,9 +120,7 @@
         tg.expand();
 
 
-
-
-        order.addEventListener("click", () => {
+        rr.addEventListener("click", () => {
             let name = document.getElementById("user_name").value;
             let number = document.getElementById("user_number").value;
             let naming = document.getElementById("user_naming").value;
